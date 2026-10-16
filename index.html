@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#ffffff" />
+    <meta
+      name="description"
+      content="Discover the best local restaurants and order your favourite food."
+    />
+    <title>zomato — food made joyful</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="header-inner">
+        <a class="wordmark" href="#" aria-label="Zomato home" data-home>zomato</a>
+        <div class="location-search">
+          <label class="location-field">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 22s8-7.2 8-13a8 8 0 1 0-16 0c0 5.8 8 13 8 13Z"/><circle cx="12" cy="9" r="2.5"/></svg>
+            <input id="location-input" value="Bengaluru" aria-label="Delivery location" />
+            <span class="location-chevron">⌄</span>
+          </label>
+          <span class="search-divider"></span>
+          <label class="search-field">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.8" cy="10.8" r="6.8"/><path d="m16 16 5 5"/></svg>
+            <input id="search-input" placeholder="Search for restaurant, cuisine or a dish" aria-label="Search restaurants or dishes" />
+          </label>
+        </div>
+        <div class="header-actions">
+          <button class="login-button" id="login-button">Log in</button>
+          <button class="signup-button" id="signup-button">Sign up</button>
+          <button class="cart-header-button" id="mobile-cart" aria-label="Open cart">
+            <span class="cart-icon">🛍</span><span class="cart-button-label">Bag</span><span class="cart-count">0</span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main id="home-view">
+      <section class="hero">
+        <div class="hero-copy">
+          <p class="eyebrow"><span class="eyebrow-dot"></span> GOOD FOOD, GOOD MOOD</p>
+          <h1>Your next<br /><span>great meal</span><br />is just here.</h1>
+          <p class="hero-description">From neighbourhood favourites to new discoveries,<br class="desktop-break" /> the best of Bengaluru is on the menu.</p>
+          <a href="#restaurants" class="hero-cta">Explore restaurants <span>↘</span></a>
+          <div class="hero-footnote"><span class="tiny-sparkle">✳</span> Made for the love of good food</div>
+        </div>
+        <div class="hero-visual">
+          <div class="hero-blob"></div>
+          <img
+            class="hero-image"
+            src="https://images.unsplash.com/photo-1565557623262-b51c2513a641?auto=format&fit=crop&w=1050&q=85"
+            alt="A colourful spread of Indian curries and naan"
+          />
+          <div class="hero-note hero-note-top"><span class="note-icon">✦</span><span><strong>Good food</strong><small>is always a good idea</small></span></div>
+          <div class="hero-note hero-note-bottom"><span class="note-emoji">🍛</span><span><strong>Craving, sorted.</strong><small>Delivered with love</small></span></div>
+          <div class="hero-orbit">TASTE THE GOOD LIFE · TASTE THE GOOD LIFE ·</div>
+        </div>
+      </section>
+
+      <section class="category-section section-shell" aria-labelledby="category-title">
+        <div class="section-heading category-heading">
+          <div><p class="eyebrow section-eyebrow">A LITTLE SOMETHING FOR EVERY CRAVING</p><h2 id="category-title">What are you in the mood for?</h2></div>
+          <div class="carousel-controls"><button class="round-control" aria-label="Scroll categories left" data-scroll="-1">←</button><button class="round-control" aria-label="Scroll categories right" data-scroll="1">→</button></div>
+        </div>
+        <div class="category-list" id="category-list">
+          <button class="category-card active" data-category="All"><span class="category-image"><img src="https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=300&q=80" alt="" /></span><span>All cravings</span></button>
+          <button class="category-card" data-category="Biryani"><span class="category-image"><img src="https://images.unsplash.com/photo-1589302168068-964664d93dc0?auto=format&fit=crop&w=300&q=80" alt="" /></span><span>Biryani</span></button>
+          <button class="category-card" data-category="North Indian"><span class="category-image"><img src="https://images.unsplash.com/photo-1585937421612-70a008356fbe?auto=format&fit=crop&w=300&q=80" alt="" /></span><span>North Indian</span></button>
+          <button class="category-card" data-category="South Indian"><span class="category-image"><img src="https://images.unsplash.com/photo-1630383249896-424e482df921?auto=format&fit=crop&w=300&q=80" alt="" /></span><span>South Indian</span></button>
+          <button class="category-card" data-category="Pizza"><span class="category-image"><img src="https://images.unsplash.com/photo-1579751626657-72bc17010498?auto=format&fit=crop&w=300&q=80" alt="" /></span><span>Pizza</span></button>
+          <button class="category-card" data-category="Desserts"><span class="category-image"><img src="https://images.unsplash.com/photo-1551024506-0bccd828d307?auto=format&fit=crop&w=300&q=80" alt="" /></span><span>Desserts</span></button>
+          <button class="category-card" data-category="Chinese"><span class="category-image"><img src="https://images.unsplash.com/photo-1563245372-f21724e3856d?auto=format&fit=crop&w=300&q=80" alt="" /></span><span>Chinese</span></button>
+        </div>
+      </section>
+
+      <section class="promo-strip section-shell">
+        <div class="promo-copy"><span class="promo-kicker">THE GOOD FOOD CLUB</span><strong>A little extra joy<br />with every order.</strong><span>Unlock special member-only treats.</span><button id="club-button">Discover the club <span>→</span></button></div>
+        <div class="promo-art" aria-hidden="true"><span class="promo-ring"></span><span class="promo-plate">🍜</span><span class="promo-sticker">GOOD<br />FOOD<br />CLUB</span><span class="promo-spark">✳</span></div>
+      </section>
+
+      <section class="restaurant-section section-shell" id="restaurants">
+        <div class="section-heading restaurant-heading">
+          <div><p class="eyebrow section-eyebrow">THE NEIGHBOURHOOD'S FAVOURITES</p><h2>Good things are cooking</h2><p class="section-subtitle">Handpicked places, made for your kind of day.</p></div>
+          <label class="sort-select">Sort by <select id="sort-select" aria-label="Sort restaurants"><option value="recommended">Recommended</option><option value="rating">Rating: high to low</option><option value="delivery">Delivery time</option><option value="price">Cost: low to high</option></select><span>⌄</span></label>
+        </div>
+        <div class="filter-row">
+          <button class="filter-chip active" data-filter="all">✦ All restaurants</button>
+          <button class="filter-chip" data-filter="rating">★ Top rated</button>
+          <button class="filter-chip" data-filter="delivery">⚡ Under 30 min</button>
+          <button class="filter-chip" data-filter="veg">♧ Pure veg</button>
+        </div>
+        <div class="restaurant-grid" id="restaurant-grid"></div>
+        <div class="empty-results" id="empty-results" hidden><span>🥄</span><h3>No tasty matches just yet</h3><p>Try another search or browse all restaurants.</p><button id="clear-filters">Show all restaurants</button></div>
+      </section>
+      <section class="bottom-note section-shell"><span>✳</span><p>That's the good stuff. <strong>Now go make it a meal.</strong></p><span>✳</span></section>
+    </main>
+
+    <main id="checkout-view" class="checkout-view" hidden>
+      <div class="checkout-top"><button id="back-to-menu" class="back-link">← <span>Back to menu</span></button><span class="checkout-logo">zomato</span><span class="secure-label">🔒 SECURE CHECKOUT</span></div>
+      <div class="checkout-layout">
+        <section class="checkout-main">
+          <div class="checkout-title"><p class="eyebrow section-eyebrow">ALMOST THERE</p><h1>Make it yours.</h1><p>Your favourite food is just a few details away.</p></div>
+          <div class="checkout-card address-card">
+            <div class="checkout-card-heading"><span class="step-number">01</span><div><h2>Where should we deliver?</h2><p>Your food deserves a lovely landing.</p></div><span class="step-check">✓</span></div>
+            <div class="address-form">
+              <label class="form-field full-field"><span>Full name</span><input id="customer-name" placeholder="e.g. Aditi Sharma" autocomplete="name" required /></label>
+              <label class="form-field"><span>Phone number</span><div class="phone-input"><span>🇮🇳 +91</span><input id="customer-phone" type="tel" placeholder="98765 43210" autocomplete="tel" required /></div></label>
+              <label class="form-field"><span>Email address <small>(for your receipt)</small></span><input id="customer-email" type="email" placeholder="you@example.com" autocomplete="email" /></label>
+              <label class="form-field full-field"><span>Delivery address</span><textarea id="customer-address" placeholder="House / flat number, street, area..." rows="2" required></textarea></label>
+              <div class="address-tags"><button type="button" class="address-tag active" data-address="Home">⌂ Home</button><button type="button" class="address-tag" data-address="Work">▣ Work</button><button type="button" class="address-tag" data-address="Other">＋ Other</button></div>
+              <label class="form-field full-field"><span>Delivery instructions <small>(optional)</small></span><input id="delivery-note" placeholder="Ring the bell, leave at the door..." /></label>
+            </div>
+          </div>
+          <div class="checkout-card payment-card">
+            <div class="checkout-card-heading"><span class="step-number">02</span><div><h2>How would you like to pay?</h2><p>All payments are safe and secure.</p></div></div>
+            <div class="payment-options">
+              <label class="payment-option selected"><input type="radio" name="payment" value="UPI" checked /><span class="payment-symbol upi-symbol">UPI</span><span class="payment-label"><strong>UPI</strong><small>GPay, PhonePe, Paytm & more</small></span><span class="radio-mark"></span></label>
+              <label class="payment-option"><input type="radio" name="payment" value="Card" /><span class="payment-symbol">▤</span><span class="payment-label"><strong>Credit or debit card</strong><small>Visa, Mastercard, RuPay</small></span><span class="radio-mark"></span></label>
+              <label class="payment-option"><input type="radio" name="payment" value="Cash on delivery" /><span class="payment-symbol">₹</span><span class="payment-label"><strong>Cash on delivery</strong><small>Pay when your order arrives</small></span><span class="radio-mark"></span></label>
+            </div>
+          </div>
+        </section>
+        <aside class="order-summary">
+          <div class="summary-heading"><h2>Your order</h2><button id="edit-order">Edit</button></div>
+          <div id="checkout-items" class="checkout-items"></div>
+          <div class="summary-divider"></div>
+          <div class="bill-row"><span>Item total</span><span id="item-total">₹0</span></div>
+          <div class="bill-row"><span>Delivery fee <span class="muted-info">ⓘ</span></span><span id="delivery-fee">₹0</span></div>
+          <div class="bill-row"><span>Platform fee</span><span id="platform-fee">₹0</span></div>
+          <div class="bill-row discount-row"><span>🎉 First order treat</span><span id="discount-amount">− ₹0</span></div>
+          <div class="summary-divider"></div>
+          <div class="bill-row total-row"><strong>To pay</strong><strong id="grand-total">₹0</strong></div>
+          <p class="tax-note">Inclusive of all taxes</p>
+          <button id="place-order" class="place-order-button">Place your order <span>→</span></button>
+          <p class="terms-note">By placing your order, you agree to our <a href="#terms">Terms of Service</a>.</p>
+          <div class="summary-reassurance"><span>♧</span><span>Made with care. Delivered with love.</span></div>
+        </aside>
+      </div>
+      <footer class="checkout-footer">A little joy, delivered. <span>✳</span></footer>
+    </main>
+
+    <footer class="site-footer" id="site-footer">
+      <div class="footer-top"><a class="wordmark footer-logo" href="#" data-home>zomato</a><div class="footer-location">🇮🇳 India <span>⌄</span></div></div>
+      <div class="footer-columns"><div><strong>ABOUT ZOMATO</strong><a href="#about">Who we are</a><a href="#blog">Blog</a><a href="#work">Work with us</a></div><div><strong>FOR RESTAURANTS</strong><a href="#partner">Partner with us</a><a href="#apps">Apps for you</a></div><div><strong>LEARN MORE</strong><a href="#privacy">Privacy</a><a href="#security">Security</a><a href="#terms">Terms</a></div><div><strong>SOCIAL LINKS</strong><div class="social-links"><a href="#instagram" aria-label="Instagram">ig</a><a href="#facebook" aria-label="Facebook">f</a><a href="#x" aria-label="X">𝕏</a></div></div></div>
+      <div class="footer-bottom">© 2025 Zomato-inspired demo. Made By <span>raja</span> for good food lovers.</div>
+    </footer>
+    <div id="toast" class="toast" role="status" aria-live="polite"></div>
+    <div id="success-overlay" class="success-overlay" hidden>
+      <div class="success-card"><button class="success-close" id="success-close" aria-label="Close">×</button><div class="success-illustration">🍽️</div><p class="eyebrow section-eyebrow">YOU'VE MADE A VERY GOOD CHOICE</p><h2>Order's on its way!</h2><p id="success-message">We’re getting your order ready with lots of love.</p><div class="success-order-number">ORDER <strong id="order-number"></strong></div><button id="continue-browsing" class="place-order-button">Back to the good stuff <span>→</span></button></div>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>
